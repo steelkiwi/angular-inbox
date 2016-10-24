@@ -1,0 +1,9 @@
+<md-content>
+    <md-list ng-cloak infinite-scroll='$ctrl.loadMore()'>
+        <md-list-item ng-repeat="letter in $ctrl.inbox" ng-click="$ctrl.openModal(letter.id)">
+            <img ng-src="{{ $ctrl.userInfo.image.url || 'http://placehold.it/64x64' }}" class="md-avatar" />
+            <p class="text-wrapper">{{$ctrl.userInfo.displayName}}</p>
+            <div class="text-wrapper">{{letter.snippet}}</div>
+        </md-list-item>
+    </md-list>
+</md-content>
